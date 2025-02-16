@@ -31,53 +31,54 @@ Antes de comenzar con cada uno de los ejercicios:
 2. Identifica cuál es el objetivo del ejercicio:
     - Identificar el tipo de elementos que se almacenará en la cola: 
         - Ejemplos: enteros, caracteres, registros, etc.
-        - Esto va a determinar la definición de los nodos de la cola (o el tipo de array en caso de no ser una cola dinámica).
-        - Es decir, deberemos **trabajar en la propia unidad** de la cola. Tendremos el "rol" de implementador de la unidad.
+        - Esto va a determinar la definición de los nodos de la cola (o el tipo de array en caso de no ser una cola implementada en memoria dinámica).
     - Extender o modificar funcionalidades de la cola:
         - Ejemplos: contar el número de elementos de la cola, verificar si un elemento está en la cola, eliminar un elemento, etc.
         - Generar nuevos procedimientos o funciones requerirá utilizar las operaciones principales.
         - Es decir, nuevamente deberemos **trabajar en la propia unidad** de la cola ya que estamos extendiendo su funcionalidad. Tendremos el "rol" de implementador de la unidad.
     - Utilizar la cola para resolver un problema específico:
         - Ejemplos: verificar si una expresión aritmética está balanceada, verificar si una palabra es palíndroma, utilizarla para representar un conjunto de elementos, etc.
-        - En
         - En este caso, deberemos utilizar las operaciones básicas de la unidad de la cola para resolver el problema, no podemos modificar la definición de la cola.
         - Por lo tanto, deberemos **usar** la cola en el programa principal para resolver el problema. Tendremos el rol de usuario externo de la unidad cola y por lo tanto no la podremos modificar.
     
 2. Abre cada uno de los archivos proporcionados y estudia el código proporcionado.
-3. Haz que el programa compile y ejecuta el programa aunque no haga lo que se pide.
+3. Haz que el programa compile y ejecútalo aunque de primeras no haga todo lo que se pide.
 4. Realiza los ejercicios de manera ordenada, comprobando que cada uno de ellos funciona correctamente antes de pasar al siguiente.
 
 
 # Organización de los ejercicios
 - **Ejercicio 1**: Uso guiado de la cola.
     - Objetivos: interactuar con la cola, añadir, eliminar, mostrar y consultar elementos.
-    - Rol: Usar la unidad de la cola.
+    - Rol: Usuario de la unidad de la cola.
     - Dificultad: Muy baja
 - **Ejercicio 2**: Añadir un contador de elementos a la cola.
-    - Objetivos: modificar la definición de la cola
-    - Rol: Implementador/extender de la unidad.
+    - Objetivos: extender la unidad mediante la modificación de la definición de la cola
+    - Rol: Implementador de la unidad.
     - Difficultad: Baja
 - **Ejercicio 3**: Imprimir la cola en orden inverso.
     - Objetivos: hacer uso de la cola para resolver un problema específico.
-    - Rol: Usar la unidad de la cola.
+    - Rol: Usuario de la unidad de la cola.
     - Dificultad: Media
 - **Ejercicio 4:**: Sumar dos colas.
     - Objetivos: hacer uso de la cola para resolver un problema específico.
-    - Rol: Usar la unidad de la cola.
+    - Rol: Usuario de la unidad de la cola.
     - Dificultad: Bajo-Media
 - **Ejercicio 5**: Resolver ejercicios básicos basados en recorrer la cola.
     - Objetivos: hacer uso de la cola para resolver un problema específico.
-    - Rol: Extender la unidad de la cola.
+    - Rol: No indicado
     - Dificultad: Baja-Media
 - **Ejercicio 6:**: Eliminar elementos de la cola si se cumple una condición.
     - Objetivos: hacer uso de la cola para resolver un problema específico, modificar la definición de la cola y hacer uso de registros.
-    - Rol: Implementador/extender de la unidad y usar la unidad de la cola.
+    - Rol: No indicado
     - Dificultad: Media
-- **Ejercicio 7:**: Resolución de un problema.
+- **Ejercicio 7:**:  Implementación de un nuevo TAD cola y resolución de un problema que emplea dicho TAD.
     - Objetivos: hacer uso de la cola para resolver un problema específico.
-    - Rol: Implementador/extender de la unidad y usar la unidad de la cola.
+    - Rol: Ambos.
     - Dificultad: Alta
-
+- **Ejercicio 8:**: Implementación de un nuevo TAD cola.
+    - Objetivos: hacer uso de la cola para resolver un problema específico.
+    - Rol: Implementador de la cola.
+    - Dificultad: Alta
 
 # Ejercicio 1: Uso guiado de la cola
 
@@ -335,7 +336,6 @@ Desarrollar un subprograma que reciba una cola de enteros y devuelva 1 si la col
 - (cola: [1]) => 0
 
 
-
 # Ejercicio 6: Eliminar elementos de la cola si se cumple una condición
 
 En este ejercicio, trabajaremos con operaciones básicas de colas, pero esta vez nos enfocaremos en resolver problemas específicos que requieren recorrer la cola. Para realizar este ejercicio se proporciona el siguiente fichero:
@@ -384,7 +384,7 @@ Observa el método `test_eliminar_clientes_inactivos` en el fichero `cola_ej6.pa
 
 Para este ejercicio, se proporciona un enunciado más complejo que requiere la implementación de una cola especializada. Para realizar este ejercicio no se proporcionan ficheros de código, por lo que deberás crearlos desde cero.
 
-1.	Implementa un TAD ColaTransaccionesBitcoin que implemente las 5 funcionalidades básicas de una Cola (enqueue, dequeue, is_empty, first, last) además de initialize uitilizando como elemento base de la cola un registro de tipo TransaccionBitcoin, cuyos campos serán id_transaccion (un entero), fee (es la comisión para el minero en Satoshis/byte, un entero positivo), direcciones origen y destino de la transacción (cada una un string de 50), prioridad (un entero entre 0 y 3) y valor transferido en bitcoins (un real).
+1.	Implementa un TAD ColaTransaccionesBitcoin que implemente las 5 funcionalidades básicas de una Cola (enqueue, dequeue, is_empty, first, last) además de initialize utilizando como elemento base de la cola un registro de tipo TransaccionBitcoin, cuyos campos serán id_transaccion (un entero), fee (la comisión para el minero en Satoshis/byte, un entero positivo), direcciones origen y destino de la transacción (cada una un string de 50), prioridad (un entero entre 0 y 3) y valor transferido en bitcoins (un número real).
 
 2.	Añade al TAD ColaTransaccionesBitcoin una función “modificar_prioridad” que tenga como argumentos una Cola de transacciones y dos valores de prioridad: p_nueva y p_vieja, de forma que modifique la prioridad de todas las transacciones que tengan valos p_vieja poniéndolos a prioridad p_nueva. Si no hay ninguna transacción con p_vieja la cola quedaría intacta.
 
