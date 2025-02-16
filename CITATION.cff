@@ -26,8 +26,8 @@ abstract: >-
   sencillos para conocer el funcionamiento de una cola, 
   pasando por ejercicios en los que hay que modificar ligeramente 
   la estructura de la cola para almacenar registros o realizar ejercicios
-basados en el recorrido de la pila, hasta llegar a ejercicios más completos 
-que requieres de un dominio tanto de las cola como de otras TADs.
+  basados en el recorrido de la pila, hasta llegar a ejercicios más completos 
+  que requieres de un dominio tanto de las cola como de otras TADs.
 keywords:
   - pascal
   - data-estructures
