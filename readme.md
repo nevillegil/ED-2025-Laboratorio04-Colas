@@ -10,6 +10,19 @@
 | Universidad   | Universidad Rey Juan Carlos        |
 | Curso         | 2024/2025                          |
 
+
+# Tabla de contenidos
+
+- [Ejercicio 1: Uso guiado de la cola](#ejercicio-1-uso-guiado-de-la-cola)
+- [Ejercicio 2: Añadir un contador de elementos a la cola](#ejercicio-2-a%C3%B1adir-un-contador-de-elementos-a-la-cola)
+- [Ejercicio 3: Imprimir la cola en orden inverso](#ejercicio-3-imprimir-la-cola-en-orden-inverso)
+- [Ejercicio 4: Sumar dos colas](#ejercicio-4-sumar-dos-colas)
+- [Ejercicio 5: Resolver ejercicios básicos basados en recorrer la cola](#ejercicio-5-resolver-ejercicios-b%C3%A1sicos-basados-en-recorrer-la-cola)
+- [Ejercicio 6: Eliminar elementos de la cola si se cumple una condición](#ejercicio-6-eliminar-elementos-de-la-cola-si-se-cumple-una-condici%C3%B3n)
+- [Ejercicio 7: Resolución de un problema con colas con tamaño dinámico](#ejercicio-7-resoluci%C3%B3n-de-un-problema-con-colas-con-tama%C3%B1o-din%C3%A1mico)
+- [Ejercicio 8: Resolución de un problema con colas con tamaño fijo por medio de un array circular](#ejercicio-8-resoluci%C3%B3n-de-un-problema-con-colas-con-tama%C3%B1o-fijo-por-medio-de-un-array-circular)
+
+
 # ¿Cómo enfrentarse a los ejercicios?
 
 Antes de comenzar con cada uno de los ejercicios: 
@@ -158,7 +171,7 @@ Abre el archivo `uColaIntegerMod.pas` y modifica la definición de la cola para 
 
 Modifica todas aquellas funciones y procedimientos que añadan o eliminen elementos de la cola para que actualicen el contador de elementos.
 
-## Ejercicio 2.3: Implementar la función `num_elems`
+## Ejercicio 2.3: Implementar la función num_elemss`
 
 Completa la función `num_elems` para que devuelva el número de elementos de la cola en tiempo constante (O(1)).
 
