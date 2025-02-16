@@ -90,7 +90,7 @@ En este ejercicio, trabajaremos con operaciones básicas de colas. Para realizar
 ## Ejercicio 1.1: Revisa la implementación de la cola
 Abre el archivo `uColaInteger.pas` y repasa la implementación de la cola. ¿Cuál es el tipo de los elementos que se almacenan en la cola? ¿Qué operaciones básicas se pueden realizar con la cola?
 
-# Ejercicio 1.2: Crear una cola, añadir elementos y mostrar la cola
+## Ejercicio 1.2: Crear una cola, añadir elementos y mostrar la cola
 Abre el archivo `cola_ej1.pas` y completa el programa para que realice las siguientes acciones:
 1. Crear una cola.
 2. Añadir los elementos 1, 2, 3, 4 y 5 a la cola.
@@ -102,7 +102,7 @@ El programa deberá mostrar los elementos de la cola en el siguiente formato:
 [1, 2, 3, 4, 5]
 ```
 
-# Ejercicio 1.3: Trabajar con el primer y último elemento de la cola
+## Ejercicio 1.3: Trabajar con el primer y último elemento de la cola
 Completa el programa para que realice las siguientes acciones:
 1. Mostrar el primer elemento de la cola.
 2. Mostrar el último elemento de la cola.
@@ -116,7 +116,7 @@ Primer elemento: 1
 Diferencia: -4
 ```
 
-# Ejercicio 1.4: Eliminar elementos de la cola
+## Ejercicio 1.4: Eliminar elementos de la cola
 Completa el programa para que realice las siguientes acciones:
 
 1. Muestra el número de elementos de la cola.
@@ -137,7 +137,7 @@ Número de elementos de la cola: 4
 Número de elementos de la cola: 0
 ```
 
-# Ejercicio 1.5: Consultar si la cola está vacía
+## Ejercicio 1.5: Consultar si la cola está vacía
 
 Completa el programa para que realice las siguientes acciones:
 
@@ -352,7 +352,7 @@ El fichero `uColaClientes.pas` es la cola de enteros que se ha utilizado en los 
 
 Por otro lado, el fichero `cola_ej6.pas` es el programa principal que se encargará de probar la implementación de la cola.
 
-# Ejercicio 6.1: Modificar la definición de la cola
+## Ejercicio 6.1: Modificar la definición de la cola
 
 Abre el archivo `uColaClientes.pas` y modifica la definición de la cola para que pueda almacenar "clientes". 
 Un cliente puede ser definido como un registro con los siguientes campos: codigo (entero) y activo (booleano). El campo código representa el código del cliente y el campo activo indica si el cliente está activo o no.
@@ -365,7 +365,7 @@ En este ejercicio estás tomando el rol de **desarrollador de la unidad**.
 
 Modifica el método toString para que muestre los clientes de la cola. 
 
-# Ejercicio 6.2: Comprueba que la cola se han implementado correctamente
+## Ejercicio 6.2: Comprueba que la cola se han implementado correctamente
 
 En el fichero `cola_ej6.pas`, implementa un procedimiento que inicialice la cola, es decir, que añada varios clientes a la cola. A continuación, muestra los clientes de la cola.
 
@@ -375,13 +375,13 @@ En el fichero `cola_ej6.pas`, implementa un procedimiento que inicialice la cola
 
 En este ejercicio estás tomando el rol de **usuario externo de la unidad**, ya que estás utilizando la cola y sus métodos sin modificar la definición de la cola.
 
-# Ejercicio 6.3: Eliminar clientes de la cola si no están activos
+## Ejercicio 6.3: Eliminar clientes de la cola si no están activos
 
 Desarrolla un procedimiento en el fichero `cola_ej5.pas` que reciba una cola de clientes y elimine todos los clientes que no están activos.
 
 Al igual que en el ejercicio anterior, en este ejercicio estás tomando el rol de **usuario externo de la unidad**.
 
-# Ejercicio 6.4: Comprueba que la cola se ha implementado correctamente
+## Ejercicio 6.4: Comprueba que la cola se ha implementado correctamente
 
 Observa el método `test_eliminar_clientes_inactivos` en el fichero `cola_ej6.pas`. Este método prueba la implementación del procedimiento que has desarrollado en el ejercicio anterior.
 
