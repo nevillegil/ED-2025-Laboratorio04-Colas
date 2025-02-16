@@ -1,4 +1,4 @@
-program colas_ej1.pas;
+program colas_ej1;
 
 uses uColaInteger;
 
