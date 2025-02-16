@@ -172,7 +172,7 @@ Abre el archivo `uColaIntegerMod.pas` y modifica la definición de la cola para 
 
 Modifica todas aquellas funciones y procedimientos que añadan o eliminen elementos de la cola para que actualicen el contador de elementos.
 
-## Ejercicio 2.3: Implementar la función num_elemss`
+## Ejercicio 2.3: Implementar la función `num_elems`
 
 Completa la función `num_elems` para que devuelva el número de elementos de la cola en tiempo constante (O(1)).
 
@@ -193,10 +193,10 @@ El programa realiza las siguientes acciones:
 2. **Analizar Tiempo**:
     - Inicializa dos colas, una utilizando el módulo `uColaInteger` y otra utilizando el módulo `uColaIntegerMod`.
     - Encola 100,000 elementos en ambas colas.
-    - Mide y muestra el tiempo que tarda la función `num_elems` en ejecutarse para ambas colas.
+    - Mide y muestra el tiempo que tarda la función `num_elems` en ejecutarse para ambas colas. Te recomendamos utilizar la unidad [DateUtils](https://www.freepascal.org/docs-html/rtl/dateutils/index-5.html) de Pascal para ello.
 
 El programa permite comparar la eficiencia de la implementación original de la cola con la implementación modificada, especialmente en términos de tiempo de ejecución de la función `num_elems`. 
-AHora, razona: 
+Ahora, razona: 
 - ¿Te esperabas los resultados obtenidos?
 - ¿Cuál es el máximo número de elementos que puedes encolar en la cola antes de que la función `num_elems` sea más lenta en la implementación original?
 - ¿Cuál es el número de elementos que tienes que meter para que la función `num_elems` tarde más de 10 segundos en la implementación original?
@@ -204,15 +204,15 @@ AHora, razona:
 
 # Ejercicio 3: Imprimir la cola en orden inverso
 
-En este ejercicio, trabajaremos con operaciones básicas de colas. Para realizar este ejercicio se proporcionan los siguientes ficheros:
+En este ejercicio trabajaremos con operaciones básicas de colas. Para este ejercicio se proporcionan los siguientes ficheros:
 
 - `uColaInteger.pas`
 - `cola_ej3.pas`
 
-En este ejercicio, se pide imprimir los elementos de la cola en orden inverso. Para ello, deberás implementar un subprograma que reciba una cola y muestre los elementos de la cola en orden inverso. 
-No se permite modificar la unidadd de la cola, unicamente se puede usar las operaciones básicas de la cola. 
+Se pide imprimir los elementos de la cola en orden inverso. Para ello, deberás implementar un subprograma que reciba una cola y muestre los elementos de la cola en orden inverso. 
+No se permite modificar la unidadd de la cola: unicamente se pueden usar las operaciones básicas de la cola. 
 
-Consejo: Si utilizad una pila, puede que os resulte más sencillo resolver el problema. Para ello, podéis utilizar la unidad `uPilaInteger.pas` que se proporciona en este mismo directorio.
+Consejo: utilizando una pila puede que te resulte más sencillo resolver el problema: tienes a tu disposición la unidad `uPilaInteger.pas` en esta misma carpeta.
 
 ## Condiciones
 
@@ -243,7 +243,9 @@ En este ejercicio, trabajaremos con operaciones básicas de colas. Para realizar
 - `uColaInteger.pas`
 - `cola_ej4.pas`
 
-Desarrollar un subprograma que reciba dos colas de enteros y devuelva una nueva cola con la suma de los elementos de las colas originales.
+## Ejercicio 4.1: Sumar dos colas de igual tamaño
+
+Desarrollar un subprograma que reciba dos colas de enteros (con el mismo número de elementos) y devuelva una nueva cola con la suma de los elementos de las colas originales.
 
 ## Entradas: 
 - Dos colas de enteros
@@ -253,10 +255,24 @@ Desarrollar un subprograma que reciba dos colas de enteros y devuelva una nueva 
 
 ## Ejemplos: 
 - (cola1: [1, 2, 3], cola2: [4, 5, 6]) => [5, 7, 9]
+- (cola1: [1, 2], cola2: [4, 5]) => [5, 7]
+
+## Ejercicio 4.2: Sumar dos colas, independientemente de su tamaño
+
+### Descripción
+
+Desarrollar un subprograma que reciba dos colas de enteros y devuelva una nueva cola con la suma de los elementos de las colas originales. Si el número de elementos no es el mismo, por ejemplo la cola1 tiene más elementos que la cola2, entonces una vez sumada la parte común se copiará en la cola resultado el resto de elementos de la cola 1.
+
+### Entradas
+- Dos colas de enteros
+
+### Salida
+- Una cola de enteros con la suma de los elementos de las colas originales
+
+### Ejemplos
+- (cola1: [1, 2, 3], cola2: [4, 5, 6]) => [5, 7, 9]
 - (cola1: [1, 2, 3], cola2: [4, 5]) => [5, 7, 3]
 - (cola1: [1, 2], cola2: [4, 5, 6]) => [5, 7, 6]
-
-
 
 
 # Ejercicio 5: Resolver ejercicios básicos basados en recorrer la cola
@@ -267,7 +283,6 @@ En este ejercicio, trabajaremos con operaciones básicas de colas, pero esta vez
 - `cola_ej5.pas`
 
 ## Condiciones
-
 - La cola debe mantener su contenido y orden original.
 - Complejidad de tiempo esperada: O(n)
 - Complejidad de espacio auxiliar esperada:
@@ -278,28 +293,22 @@ En este ejercicio, trabajaremos con operaciones básicas de colas, pero esta vez
 ## Ejercicio 5.1: Comprobar si un número está en la cola
 
 ### Descripción
-
 Desarrollar un subprograma que reciba una cola y un número entero y devuelva verdadero si el número está en la cola y falso en caso contrario.
 
 ### Entradas
-
 - Cola de enteros
 - Número entero
 
 ### Salida
-
 - Booleano: Verdadero si el número está en la cola, falso en caso contrario.
 
 ### Ejemplos
-
 - (cola: [1, 2, 3, 4, 5], n: 3) => true
 - (cola: [1, 2, 3, 4, 5], n: 6) => false
-
 
 ## Ejercicio 5.2: Comprobar si un número está en la cola y devolver su posición
 
 ### Descripción
-
 A partir del subprograma anterior, desarrollar un nuevo subprograma que reciba una cola y un número entero y devuelva la posición del número en la cola. Devolver -1 si el número no está en la cola.
 
 ### Entradas
@@ -307,7 +316,6 @@ A partir del subprograma anterior, desarrollar un nuevo subprograma que reciba u
 - Número entero
 
 ### Salida
-
 - Entero: Posición del número en la cola. Devolver -1 si el número no está en la cola. La posición de un elemento en la cola se cuenta desde 1.
 
 ### Ejemplos
@@ -315,11 +323,9 @@ A partir del subprograma anterior, desarrollar un nuevo subprograma que reciba u
 - (cola: [1, 2, 3, 4, 5], n: 1) => 1
 - (cola: [1, 2, 3, 4, 5], n: 6) => -1
 
-
 ## Ejercicio 5.3: Determinar si la cola está ordenada
 
 ### Descripción
-
 Desarrollar un subprograma que reciba una cola de enteros y devuelva 1 si la cola está ordenada de forma creciente, -1 si está ordenada de forma decreciente y 0 si no está ordenada.
 
 ### Entradas
@@ -327,7 +333,6 @@ Desarrollar un subprograma que reciba una cola de enteros y devuelva 1 si la col
 
 ### Salida
 - Entero: 1 si la cola está ordenada de forma creciente, -1 si está ordenada de forma decreciente y 0 si no está ordenada. En caso de una cola vacía o con un solo elemento, devolver 0.
-
 
 ### Ejemplos
 - (cola: [1, 2, 3, 4, 5]) => 1
@@ -343,7 +348,7 @@ En este ejercicio, trabajaremos con operaciones básicas de colas, pero esta vez
 - `uColaClientes.pas`
 - `cola_ej6.pas`
 
-El fichero `uColaClientes.pas` es la pila de enteros que se ha utilizado en los ejercicios anteriores, pero con un nombre diferente. El objetivo es modificar la definición de esta pila para poder resolver el problema propuesto.
+El fichero `uColaClientes.pas` es la cola de enteros que se ha utilizado en los ejercicios anteriores, pero con un nombre diferente. El objetivo es modificar la definición de esta cola para poder resolver el problema propuesto.
 
 Por otro lado, el fichero `cola_ej6.pas` es el programa principal que se encargará de probar la implementación de la cola.
 
@@ -376,7 +381,7 @@ Desarrolla un procedimiento en el fichero `cola_ej5.pas` que reciba una cola de 
 
 Al igual que en el ejercicio anterior, en este ejercicio estás tomando el rol de **usuario externo de la unidad**.
 
-# Ejercicio 6.4: Comprueba que la cola se han implementado correctamente
+# Ejercicio 6.4: Comprueba que la cola se ha implementado correctamente
 
 Observa el método `test_eliminar_clientes_inactivos` en el fichero `cola_ej6.pas`. Este método prueba la implementación del procedimiento que has desarrollado en el ejercicio anterior.
 
