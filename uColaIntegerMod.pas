@@ -42,7 +42,47 @@ procedure initialize_queue(var c: tCola);
 begin
     c.first := nil; // Establecer el primer nodo a nil
     c.last := nil;  // Establecer el último nodo a nil
+    c.contador := 0; // Inicializar el contador a 0
 end;
+
+// Agregar un elemento a la cola
+procedure enqueue(var c: tCola; x: integer);
+var
+    nuevo: ^nodo; 
+begin
+    new(nuevo); 
+    nuevo^.info := x; 
+    nuevo^.sig := nil; 
+    if empty_queue(c) then
+        c.first := nuevo 
+    else
+        c.last^.sig := nuevo; 
+    c.last := nuevo; 
+    c.contador := c.contador + 1; 
+end
+
+// Eliminar un elemento de la cola
+procedure dequeue(var c: tCola);
+var
+    aux: ^nodo; // Nodo auxiliar
+begin
+    if not empty_queue(c) then
+    begin
+        aux := c.first; 
+        c.first := c.first^.sig; 
+        dispose(aux); 
+        c.contador := c.contador - 1; 
+        if c.first = nil then
+            c.last := nil; 
+    end;
+
+// Limpiar la cola
+procedure clear(var c: tCola);
+begin
+    while not empty_queue(c) do
+        dequeue(c); 
+    c.contador := 0; 
+end
 
 // Verificar si la cola está vacía
 function empty_queue(c: tCola): boolean;
