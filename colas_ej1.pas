@@ -1,4 +1,4 @@
-program colas_ej1;
+ueprogram colas_ej1;
 
 uses uColaInteger;
 
@@ -11,11 +11,11 @@ begin
     crearCola(cola);
 
     // 1.2.2 Añadir los elementos 1, 2, 3, 4 y 5 a la cola
-    anadir(cola, 1);
-    anadir(cola, 2);
-    anadir(cola, 3);
-    anadir(cola, 4);
-    anadir(cola, 5);
+    enqueue(cola, 1);
+    enqueue(cola, 2);
+    enqueue(cola, 3);
+    enqueue(cola, 4);
+    enqueue(cola, 5);
 
     // 1.2.3 Mostrar los elementos de la cola
     mostrarCola(cola);
@@ -61,7 +61,7 @@ begin
         writeln('La cola no está vacía');
 
     // 1.5.2 Añadir el elemento 1 a la cola
-    anadir(cola, 1);
+    enqueue(cola, 1);
 
     // 1.5.3 Consultar si la cola está vacía
     if esVacia(cola) then
