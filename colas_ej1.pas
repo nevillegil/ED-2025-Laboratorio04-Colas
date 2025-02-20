@@ -30,12 +30,12 @@ begin
     // 1.3.3 Mostrar la diferencia entre el primer y el último elemento de la cola (first - último)
     writeln('Diferencia (first - último): ', first(cola) - last(cola));
 
-    // Ejercicio 1.4: Eliminar elementos de la cola
+    // Ejercicio 1.4: dequeue elementos de la cola
     // 1.4.1. Muestra el número de elementos de la cola.
     writeln('Número de elementos: ', numElementos(cola));
 
-    // 1.4.2 Eliminar el primer elemento de la cola
-    eliminar(cola);
+    // 1.4.2 dequeue el primer elemento de la cola
+    dequeue(cola);
 
     // 1.4.3 Mostrar los elementos de la cola
     mostrarCola(cola);
@@ -43,9 +43,9 @@ begin
     // 1.4.4. Muestra el número de elementos de la cola.
     writeln('Número de elementos: ', numElementos(cola));
 
-    // 1.4.5 Eliminar todos los elementos de la cola
+    // 1.4.5 dequeue todos los elementos de la cola
     while not esVacia(cola) do
-        eliminar(cola);
+        dequeue(cola);
 
     // 1.4.6 Mostrar los elementos de la cola
     mostrarCola(cola);
