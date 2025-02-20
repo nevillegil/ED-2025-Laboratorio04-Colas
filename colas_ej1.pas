@@ -22,13 +22,13 @@ begin
 
     // Ejercicio 1.3: Trabajar con el primer y último elemento de la cola
     // 1.3.1 Mostrar el primer elemento de la cola
-    writeln('Primer elemento: ', primero(cola));
+    writeln('Primer elemento: ', first(cola));
 
     // 1.3.2 Mostrar el último elemento de la cola
-    writeln('Último elemento: ', ultimo(cola));
+    writeln('Último elemento: ', last(cola));
 
-    // 1.3.3 Mostrar la diferencia entre el primer y el último elemento de la cola (primero - último)
-    writeln('Diferencia (primero - último): ', primero(cola) - ultimo(cola));
+    // 1.3.3 Mostrar la diferencia entre el primer y el último elemento de la cola (first - último)
+    writeln('Diferencia (first - último): ', first(cola) - last(cola));
 
     // Ejercicio 1.4: Eliminar elementos de la cola
     // 1.4.1. Muestra el número de elementos de la cola.
