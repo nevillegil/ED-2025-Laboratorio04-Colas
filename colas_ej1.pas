@@ -44,7 +44,7 @@ begin
     writeln('Número de elementos: ', numElementos(cola));
 
     // 1.4.5 dequeue todos los elementos de la cola
-    while not esVacia(cola) do
+    while not empty_queue(cola) do
         dequeue(cola);
 
     // 1.4.6 Mostrar los elementos de la cola
@@ -55,7 +55,7 @@ begin
 
     // Ejercicio 1.5: Consultar si la cola está vacía
     // 1.5.1 Consultar si la cola está vacía
-    if esVacia(cola) then
+    if empty_queue(cola) then
         writeln('La cola está vacía')
     else
         writeln('La cola no está vacía');
@@ -64,7 +64,7 @@ begin
     enqueue(cola, 1);
 
     // 1.5.3 Consultar si la cola está vacía
-    if esVacia(cola) then
+    if empty_queue(cola) then
         writeln('La cola está vacía')
     else
         writeln('La cola no está vacía');
