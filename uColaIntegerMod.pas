@@ -12,6 +12,7 @@ type
     // Estructura de la cola
     tCola = record
         first, last: ^nodo; // Punteros al primer y último nodo
+        contador: integer;  
     end;
 
 { --- Operaciones básicas de la cola --- }
