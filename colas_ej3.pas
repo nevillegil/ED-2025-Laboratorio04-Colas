@@ -34,8 +34,33 @@ end;
         - (cola: [1, 2, 3, 4, 5]) => 5 4 3 2 1
 }
 procedure mostrar_inverso_pila(c: tCola);
+var
+    pila: tStack;
+    elem: integer;
 begin
-    WriteLn('No implementado');
+    initialize_stack(pila);
+
+    { Pasamos todos los elementos de la cola a la pila }
+    while not isEmptyQueue(c) do
+    begin
+        dequeue(c, elem);
+        push(pila, elem);
+    end;
+
+    { Mostramos los elementos de la pila, que están en orden inverso }
+    while not isEmptyStack(pila) do
+    begin
+        pop(pila, elem);
+        Write(elem, ' ');
+    end;
+
+    { Volvemos a pasar los elementos de la pila a la cola para mantener el orden original }
+    while not isEmptyStack(pila) do
+    begin
+        pop(pila, elem);
+        enqueue(c, elem);
+    end;
+end
 end;
 
 
